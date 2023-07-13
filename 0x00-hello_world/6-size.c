@@ -3,7 +3,7 @@
  * main - a program that prints the size of various types on the computer it is compiled and run on
  * Return: 0 (succes)
  */
-int main (void)
+int main(void)
 {
 char A;
 int B;
