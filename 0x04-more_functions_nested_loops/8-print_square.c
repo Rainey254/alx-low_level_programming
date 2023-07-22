@@ -1,16 +1,25 @@
 #include "main.h"
 /**
-*print_numbers - function that print all numbers from
-*0 to 9
-*
-*Return: returns nothing
+*print_square - prints squares
+*@size: parameter
+*Return:returns nothing
 */
-void print_numbers(void)
+void print_square(int size)
 {
-int number = 48;
-for (number = 48; number < 58; number++)
+int inc1, inc2;
+if (size > 0)
 {
-_putchar(number);
+for (inc1 = 0; inc1 < size; inc1++)
+{
+for (inc2 = 0; inc2 < (size - 1); inc2++)
+_putchar('#');
+
+_putchar('#');
+_putchar('\n');
 }
-_putchar(10);
+}
+else
+{
+_putchar('\n');
+}
 }
