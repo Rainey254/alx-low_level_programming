@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 /**
  * _strcat - concatenates 2 strings.
  * @dest: string with concatenation
@@ -24,3 +24,4 @@ char *_strcat(char *dest, char *src)
 	*(dest + lengthD) = '\0';
 	return (dest);
 }
+
