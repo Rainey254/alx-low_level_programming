@@ -1,26 +1,18 @@
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
 
-/*
- *
- * Sets the value of a bit to 1 at a given index
- * 
- * Index to replace in the number
- * 
- * Alway Return: 1 if it work or -1 if an error occurr
- *
+/**
+ * set_bit - A function that sets a bit at given index to 1
+ * @n: The number to set bit in
+ * @index: The index to set bit at
+ * Return: 1 if it worked, or -1 on error
  */
-
 int set_bit(unsigned long int *n, unsigned int index)
-
 {
-	unsigned int aux;
+	unsigned long int max = 0x01;
 
-	if (index > sizeof(unsigned int) * 16)
+	max <<= index;
+	if (max == 0)
 		return (-1);
-	aux = 1;
-	aux = aux << index;
-	*n = ((*n) | aux);
+	*n |= max;
 	return (1);
 }

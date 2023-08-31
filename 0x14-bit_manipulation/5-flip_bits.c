@@ -1,26 +1,23 @@
-#include "main.h"
+#include <stdio.h>
+#include "holberton.h"
 
-/*
- * Flip_bits - Returns the number of bits you would need to flip to get from one number to another.
- *
- * 
- * Always Return the number of bits you would need to flip
- *
+/**
+ * flip_bits - A function that gets number of bits needed to flip
+ * @n: How many bit flips are needed to equal m for n
+ * @m: The number to set other equal
+ * Return: The number of fliped bits
  */
-
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
-
 {
-	unsigned long int result;
-	unsigned long int count;
+	unsigned int flips = 0;
+	unsigned long int xor = (n ^ m);
+	unsigned long int max = 0x01;
 
-	result = n ^ m;
-	for (count = 0; result > 0;)
+	while (max <= xor)
 	{
-		if ((result & 1) == 1)
-			count++;
-		result = result >> 1;
+	if (max & xor)
+	flips++;
+	max <<= 1;
 	}
-
-	return (count);
+	return (flips);
 }
