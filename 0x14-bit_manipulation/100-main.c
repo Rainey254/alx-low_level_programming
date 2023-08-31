@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "holberton.h"
+#include "../main.h"
 
 int main(void);
 {
@@ -8,11 +8,11 @@ int main(void);
 	n = get_endianness();
 	if (n != 0)
 	{
-	printf("Little Endian\n");
+		printf("Little Endian\n");
 	}
 	else
 	{
-	printf("Big Endian\n");
+		printf("Big Endian\n");
 	}
 	return (0);
 }

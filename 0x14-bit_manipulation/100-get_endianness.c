@@ -1,15 +1,14 @@
-#include "holberton.h"
-
 /**
- * get_endianness - A function that checks endianness
- * Return: 0 if big endian, 1 if little endian
- */
+ * get_endianness - a function that checks if
+ *                  architecture is little endian
+ *                  or big endian
+ *
+ * Return: 1 if little endian or 0 if big endian
+*/
 int get_endianness(void)
 {
-	unsigned int i = 1;
-	char *c = (char *)&i;
+	unsigned int num = 1;
+	char *c = (char *) &num;
 
-	if (*c)
-		return (1);
-	return (0);
+	return (c[0]);
 }
